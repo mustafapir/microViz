@@ -167,7 +167,7 @@ ord_explore <- function(data = NULL,
   #   }
   # })
 
-  data<-readRDS("~/microviz_out/phyloseq_obj.rds")
+  # data<-readRDS("~/microviz_out/phyloseq_obj.rds")
   # data<-readRDS("/home/mustafa/viascientific/debug/taxonomy_out/microviz_out/phyloseq_obj.rds")
 
   # SETUP -------------------------------------------------------------------
