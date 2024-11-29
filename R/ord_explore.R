@@ -146,7 +146,7 @@
 #'     ord_calc() %>%
 #'     ord_explore()
 #' }
-ord_explore <- function(data,
+ord_explore <- function(data = NULL,
                         sample_id = NULL, # id var name for data_id ggiraph
                         seriate_method = "OLO_ward", # ordering samples
                         app_options = list(launch.browser = TRUE), # shinyApp()
@@ -155,6 +155,21 @@ ord_explore <- function(data,
                         notification_durations = list(2, 20),
                         counts_warn = TRUE,
                         ...) {
+
+  # Check data
+
+  # data_path<-reactive({
+  #   if (Sys.info()[[4]] == 'PHAGO') {
+  #     "/home/mustafa/microviz_out/"
+  #   } else {
+  #     return("~/microviz_out/phyloseq_obj.rds")
+  #     # paste0(getwd(), "/microviz_out/")
+  #   }
+  # })
+
+  data<-readRDS("~/microviz_out/phyloseq_obj.rds")
+  # data<-readRDS("/home/mustafa/viascientific/debug/taxonomy_out/microviz_out/phyloseq_obj.rds")
+
   # SETUP -------------------------------------------------------------------
 
   # widths of plots including space for legends, in inches
